@@ -39,3 +39,4 @@ export const getPosts = async () => {
 
     return result.postsConnection.edges;
 };
+
