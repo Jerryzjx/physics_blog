@@ -82,4 +82,3 @@ export const getSimilarPosts = async () => {
 
     return result.posts;
 }
-}
