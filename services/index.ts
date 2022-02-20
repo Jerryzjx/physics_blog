@@ -61,4 +61,4 @@ export const getRecentPosts = async () =>{
     return result.posts;
 }
 
-export const
+export const getSimilarPosts = async () =>
