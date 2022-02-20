@@ -61,4 +61,8 @@ export const getRecentPosts = async () =>{
     return result.posts;
 }
 
-export const getSimilarPosts = async () =>
+export const getSimilarPosts = async () => {
+    const query = gql`
+        query GetPostDetails(){}
+    `
+}
