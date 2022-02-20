@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import Link from 'next/link';
 
+// @ts-ignore
 const AdjacentPostCard = ({ post, position }) => (
     <>
         <div className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72" style={{ backgroundImage: `url('${post.featuredImage.url}')` }} />
