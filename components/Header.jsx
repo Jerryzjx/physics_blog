@@ -13,7 +13,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="w-full container mx-auto px-10 mb-8 ">
+        <div className=" w-full container mx-auto px-10 mb-8 ">
             <div className="border-b-2 border-gray-200 w-full inline-block py-8 my-2">
                 <div className="md:float-left block">
                     <Link href="/">
