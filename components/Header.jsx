@@ -13,16 +13,16 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="container mx-auto px-10 mb-8">
-            <div className="border-b w-full inline-block border-white py-8">
+        <div className="w-full container mx-auto px-10 mb-8 ">
+            <div className="border-b-2 border-gray-200 w-full inline-block py-8 my-2">
                 <div className="md:float-left block">
                     <Link href="/">
-                        <span className="cursor-pointer font-bold text-4xl text-white">Jerry's Blog</span>
+                        <span className="cursor-pointer font-bold text-4xl text-white ">Jerry's Blog</span>
                     </Link>
                 </div>
-                <div className="hidden md:float-left md:contents">
+                <div className=" md:float-left md:contents">
                     {categories.map((category, index) => (
-                        <Link key={index} href={`/category/${category.slug}`}><span className="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer">{category.name}</span></Link>
+                        <Link key={index} href={`/category/${category.slug}`}><span className="md:float-right mt-2 align-middle text-white ml-7 font-semibold text-2xl cursor-pointer hover:text-yellow-300 transition duration-500 ease transform hover:-translate-y-1 ">{category.name}</span></Link>
                     ))}
                 </div>
             </div>
