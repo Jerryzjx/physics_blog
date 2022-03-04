@@ -58,8 +58,8 @@ const PostCard = ({ post }) => (
                                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
      </span>
                     <span
-                        className="absolute flex items-center justify-center w-full h-full text-pink-600 transition-all duration-300 transform group-hover:translate-x-full ease">Read More</span>
-                    <span className="relative invisible">Read More</span>
+                        className="absolute flex items-center justify-center w-full h-full text-pink-600 transition-all duration-300 transform group-hover:translate-x-full ease text-lg">Read More</span>
+                    <span className="relative invisible text-lg">Read More</span>
                 </a>
             </Link>
         </div>
