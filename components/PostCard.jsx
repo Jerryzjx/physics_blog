@@ -17,8 +17,8 @@ const PostCard = ({ post }) => (
         src={post.featuredImage.url}
       />
     </div> */}
-        <div className="relative overflow-hidden shadow-md pb-80 mb-6">
-            <img src={post.featuredImage.url} alt="" className="object-top absolute h-170 w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
+        <div className="relative h-full overflow-hidden shadow-md pb-72 mb-6 lg:pb-[500px]">
+            <img src={post.featuredImage.url} alt="" className=" object-top absolute h-full w-full object-cover shadow-lg rounded-lg " />
         </div>
 
         <h1 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
@@ -44,12 +44,23 @@ const PostCard = ({ post }) => (
                 <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
             </div>
         </div>
-        <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
+        <p className="text-center text-xl text-gray-700 font-normal px-4 lg:px-20 mb-8">
             {post.excerpt}
         </p>
         <div className="text-center">
             <Link href={`/post/${post.slug}`}>
-                <span className="transition duration-500 ease transform hover:-translate-y-1 hover:bg-pink-600 inline-block bg-teal-500 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Continue Reading</span>
+                <a href="#_"
+                   className="relative inline-flex items-center justify-center p-4 px-9 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-pink-600 rounded-full shadow-md group">
+     <span
+         className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-pink-600 group-hover:translate-x-0 ease">
+         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                       d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+     </span>
+                    <span
+                        className="absolute flex items-center justify-center w-full h-full text-pink-600 transition-all duration-300 transform group-hover:translate-x-full ease">Read More</span>
+                    <span className="relative invisible">Read More</span>
+                </a>
             </Link>
         </div>
     </div>
