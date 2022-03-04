@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactPlayer from 'react-player'
 import moment from 'moment';
 
 const PostDetail = ({ post }) => {
@@ -12,7 +12,7 @@ const PostDetail = ({ post }) => {
             }
 
             if (obj.italic) {
-                modifiedText = (<em key={index}>{text}</em>);
+                modifiedText = (<h6 key={index} className="font-semibold text-orange-500">{text}</h6>);
             }
 
             if (obj.underline) {
@@ -21,14 +21,23 @@ const PostDetail = ({ post }) => {
         }
 
         switch (type) {
+            case 'heading-two':
+                return <h2 key={index} className="text-2xl font-bold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
             case 'heading-three':
                 return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
             case 'paragraph':
                 return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+            case 'link':
+                return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+            case 'blockquote':
+                return <blockquote key={index} className="mb-8 font-bold text-lg indent-2 backdrop-blur-xl shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</blockquote>;
             case 'heading-four':
-                return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+                return <h4 key={index} className="text-lg mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+            case 'heading-five':
+                return <h5 key={index} className="text-lg font-light mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5>;
             case 'image':
                 return (
+                    <div className="hidden md:flex items-center justify-center lg:mb-2 mt-2 lg:w-auto mr-8 items-center ">
                     <img
                         key={index}
                         alt={obj.title}
@@ -36,7 +45,9 @@ const PostDetail = ({ post }) => {
                         width={obj.width}
                         src={obj.src}
                     />
+                    </div>
                 );
+
             default:
                 return modifiedText;
         }
@@ -49,7 +60,7 @@ const PostDetail = ({ post }) => {
                     <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
                 </div>
                 <div className="px-4 lg:px-0">
-                    <div className="flex items-center mb-8 w-full">
+                    <div className="flex items-center justify-center w-full mb-5 mt-5">
                         <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
                             <img
                                 alt={post.author.name}
