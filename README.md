@@ -1,5 +1,5 @@
-# Project: Personal Blog
-### This is my personal blog website built using Next.js. 
+# Project: Physics Blog
+### This is my physics blog website built using Next.js. 
 ## Technology used: 
 ![tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
