@@ -86,7 +86,7 @@ const CommentsForm = ({ slug }) => {
             </div>
             <div className="grid grid-cols-1 gap-4 mb-4">
                 <div>
-                    <input checked={formData.storeData} onChange={onInputChange} type="checkbox" id="storeData" name="storeData" value="true" />
+                    <input className="w-4 h-4 rounded border focus:ring-3 focus:ring-blue-300"  checked={formData.storeData} onChange={onInputChange} type="checkbox" id="storeData" name="storeData" value="true" />
                     <label className="text-gray-500 cursor-pointer" htmlFor="storeData"> Save my name, email in this browser for the next time I comment.</label>
                 </div>
             </div>

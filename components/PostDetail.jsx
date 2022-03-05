@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPlayer from 'react-player'
+
 import moment from 'moment';
 
 const PostDetail = ({ post }) => {
@@ -8,15 +8,15 @@ const PostDetail = ({ post }) => {
 
         if (obj) {
             if (obj.bold) {
-                modifiedText = (<b key={index}>{text}</b>);
+                modifiedText = (<b key={index} className="display: inline-block">{text}</b>);
             }
 
             if (obj.italic) {
-                modifiedText = (<h6 key={index} className="font-semibold text-orange-500">{text}</h6>);
+                modifiedText = (<h5 key={index} className="display: inline-block text-orange-500">{text}</h5>);
             }
 
             if (obj.underline) {
-                modifiedText = (<u key={index}>{text}</u>);
+                modifiedText = (<u key={index} className="display: inline-block">{text}</u>);
             }
         }
 
@@ -37,8 +37,8 @@ const PostDetail = ({ post }) => {
                 return <h5 key={index} className="text-lg font-light mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5>;
             case 'image':
                 return (
-                    <div className="hidden md:flex items-center justify-center lg:mb-2 mt-2 lg:w-auto mr-8 items-center ">
-                    <img
+                    <div className="hidden md:flex items-center justify-center lg:mb-2 mt-2 lg:w-auto items-center">
+                    <img className="rounded-2xl items-center"
                         key={index}
                         alt={obj.title}
                         height={obj.height}
@@ -47,6 +47,28 @@ const PostDetail = ({ post }) => {
                     />
                     </div>
                 );
+            case 'video':
+                return (
+                    <div className="hidden md:flex items-center justify-center lg:mb-2 mt-2 lg:w-auto items-center">
+                        <video
+                            id="my-player"
+                            className="video-js"
+                            controls
+                            preload="auto"
+                            >
+                            <source src={obj.src} type="video/mp4"/>
+                            <p className="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a
+                                web browser that
+                                <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                    supports HTML5 video
+                                </a>
+                            </p>
+                        </video>
+
+                    </div>
+                );
+
 
             default:
                 return modifiedText;
