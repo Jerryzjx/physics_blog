@@ -12,7 +12,7 @@ const PostDetail = ({ post }) => {
             }
 
             if (obj.italic) {
-                modifiedText = (<h5 key={index} className="display: inline-block text-orange-500">{text}</h5>);
+                modifiedText = (<b key={index} className="display: inline-block text-orange-500">{text}</b>);
             }
 
             if (obj.underline) {
