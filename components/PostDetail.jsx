@@ -22,19 +22,19 @@ const PostDetail = ({ post }) => {
 
         switch (type) {
             case 'heading-two':
-                return <h2 key={index} className="text-2xl font-bold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
+                return <h2 key={index} className="text-2xl font-bold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
             case 'heading-three':
-                return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+                return <h3 key={index} className="text-xl font-semibold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
             case 'paragraph':
                 return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
-            case 'link':
-                return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
-            case 'blockquote':
-                return <blockquote key={index} className="mb-8 font-bold text-lg indent-2 backdrop-blur-xl shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</blockquote>;
+            case 'block-quote':
+                return <blockquote className="mb-5 mt-5 p-4 bg-teal-400 rounded-2xl bg-opacity-60 backdrop-filter backdrop-blur-lg shadow-lg">
+                    <p key={index} className="text-2xl text-indigo-900">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>
+                </blockquote>;
             case 'heading-four':
-                return <h4 key={index} className="text-lg mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+                return <h4 key={index} className="text-lg display: inline-block mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
             case 'heading-five':
-                return <h5 key={index} className="text-lg font-light mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5>;
+                return <h5 key={index} className="text-lg display: inline-block font-light mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5>;
             case 'image':
                 return (
                     <div className="hidden md:flex items-center justify-center lg:mb-2 mt-2 lg:w-auto items-center">
