@@ -22,9 +22,9 @@ const PostDetail = ({ post }) => {
 
         switch (type) {
             case 'heading-two':
-                return <h2 key={index} className="text-2xl font-bold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
+                return <h2 key={index} className="text-3xl font-bold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
             case 'heading-three':
-                return <h3 key={index} className="text-xl font-semibold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+                return <h3 key={index} className="text-2xl font-semibold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
             case 'paragraph':
                 return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
             case 'block-quote':
@@ -34,7 +34,7 @@ const PostDetail = ({ post }) => {
             case 'heading-four':
                 return <h4 key={index} className="text-lg display: inline-block mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
             case 'heading-five':
-                return <h5 key={index} className="text-lg display: inline-block font-light mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5>;
+                return <div className="mb-5 mt-5 p-4 bg-emerald-200 rounded-xl bg-opacity-60 backdrop-filter backdrop-blur-lg shadow-lg display: inline-block"> <h5 key={index} className="text-2xl font-semibold display: inline-block text-blue-900">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5></div>;
             case 'image':
                 return (
                     <div className="hidden md:flex items-center justify-center lg:mb-2 mt-2 lg:w-auto items-center">
@@ -100,7 +100,7 @@ const PostDetail = ({ post }) => {
                             <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
                         </div>
                     </div>
-                    <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
+                    <h1 className="mb-8 text-4xl font-semibold">{post.title}</h1>
                     {post.content.raw.children.map((typeObj, index) => {
                         const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
 
