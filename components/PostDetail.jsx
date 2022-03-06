@@ -52,7 +52,7 @@ const PostDetail = ({ post }) => {
                     <div className="hidden md:flex items-center justify-center lg:mb-2 mt-2 lg:w-auto items-center">
                         <video
                             id="my-player"
-                            className="video-js"
+                            className="video-js rounded-2xl"
                             controls
                             preload="auto"
                             >
