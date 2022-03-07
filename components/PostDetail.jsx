@@ -31,7 +31,7 @@ const PostDetail = ({ post }) => {
                     </svg>
                     <h2 key={index} className="text-3xl font-bold underline-offset-8 decoration-pink-500 display: block mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2></div>;
             case 'heading-three':
-                return <h3 key={index} className="text-2xl font-semibold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+                return <h3 key={index} className="text-2xl underline-offset-4 font-semibold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
             case 'paragraph':
                 return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
             case 'block-quote':
