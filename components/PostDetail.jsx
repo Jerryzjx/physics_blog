@@ -12,17 +12,24 @@ const PostDetail = ({ post }) => {
             }
 
             if (obj.italic) {
-                modifiedText = (<b key={index} className="display: inline-block text-orange-500">{text}</b>);
+                modifiedText = (<b key={index} className="display: inline-block bg-yellow-200 rounded-3xl">{text}</b>);
             }
 
             if (obj.underline) {
-                modifiedText = (<u key={index} className="display: inline-block">{text}</u>);
+                modifiedText = (<u key={index} className="decoration-pink-600 display: inline-block ">{text}</u>);
             }
         }
 
+
         switch (type) {
             case 'heading-two':
-                return <h2 key={index} className="text-3xl font-bold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
+                return <div className="flex flex-row display: inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" className=" h-6 w-6 display: inline-block items-center justify-center mt-2 mr-1 group-hover: text-pink-600 motion-safe:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                    </svg>
+                    <h2 key={index} className="text-3xl font-bold underline-offset-8 decoration-pink-500 display: block mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2></div>;
             case 'heading-three':
                 return <h3 key={index} className="text-2xl font-semibold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
             case 'paragraph':
@@ -32,7 +39,7 @@ const PostDetail = ({ post }) => {
                     <p key={index} className="text-2xl text-indigo-900">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>
                 </blockquote>;
             case 'heading-four':
-                return <h4 key={index} className="text-lg display: inline-block mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+                return <h4 key={index} className="underline-offset-4 text-lg display: inline-block mb-4 ">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
             case 'heading-five':
                 return <div className="mb-5 mt-5 p-4 bg-emerald-200 rounded-xl bg-opacity-60 backdrop-filter backdrop-blur-lg shadow-lg display: inline-block"> <h5 key={index} className="text-2xl font-semibold display: inline-block text-blue-900">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5></div>;
             case 'image':
