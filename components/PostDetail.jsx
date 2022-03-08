@@ -23,21 +23,21 @@ const PostDetail = ({ post }) => {
 
         switch (type) {
             case 'heading-one':
-                return <div className="flex flex-row display: inline-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 display: inline-block items-center justify-center mt-2 mr-1 group-hover: text-pink-600 motion-safe:animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                return <div className="flex flex-row display: block">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 display: inline-block items-center justify-center mt-3.5 mr-1 group-hover: text-pink-600 motion-safe:animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
-                    <h1 key={index} className="text-3xl font-bold underline-offset-8 decoration-pink-500 display: block mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1></div>;
+                    <h1 key={index} className="text-3xl leading-relaxed tracking-wide underline-offset-8 decoration-pink-500 display: block mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1></div>;
             case 'heading-two':
-                return <div className="flex flex-row display: inline-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" className=" h-6 w-6 display: inline-block items-center justify-center mt-2 mr-1 group-hover: text-pink-600 motion-safe:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                return <div className="flex flex-row display: block">
+                    <svg xmlns="http://www.w3.org/2000/svg" className=" h-6 w-6 display: inline-block items-center justify-center mt-3.5 mr-1 group-hover: text-pink-600 motion-safe:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path d="M12 14l9-5-9-5-9 5 9 5z" />
                         <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
                     </svg>
-                    <h2 key={index} className="text-3xl font-bold underline-offset-8 decoration-pink-500 display: block mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2></div>;
+                    <h2 key={index} className="text-3xl leading-relaxed tracking-wide font-bold underline-offset-8 decoration-pink-500 display: block mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2></div>;
             case 'heading-three':
-                return <h3 key={index} className="text-2xl underline-offset-4 font-semibold mb-4 display: inline-block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+                return <h3 key={index} className="text-2xl underline-offset-4 font-semibold mb-4 display: block">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
             case 'paragraph':
                 return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
             case 'block-quote':
