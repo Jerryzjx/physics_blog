@@ -47,7 +47,7 @@ const PostDetail = ({ post }) => {
             case 'heading-four':
                 return <h4 key={index} className="underline-offset-4 text-lg display: inline-block mb-4 ">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
             case 'heading-five':
-                return <div className="shadow-[5px_5px_0px_0px_rgba(0,128,128)] border-2 border-[rgba(0,128,128)] mb-8 p-4 rounded-xl bg-opacity-60 backdrop-filter backdrop-blur-lg shadow-lg display: inline-block"> <h5 key={index} className="text-2xl font-semibold ">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5></div>;
+                return <div className="shadow-[5px_5px_0px_0px_rgba(0,128,128)] border-2 border-[rgba(0,128,128)] mb-8 p-4 rounded-xl bg-opacity-60 backdrop-filter backdrop-blur-lg shadow-lg display: inline-block"> <h5 key={index} className="text-2xl ">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5></div>;
             case 'heading-six':
                 return <div className="flex flex-row display: inline-block">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 display: inline-block items-center justify-center mr-1 group-hover: text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
