@@ -9,7 +9,7 @@
     "graphql": "^16.3.0",
     "graphql-request": "^4.0.0",
     "html-react-parser": "^1.4.8",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
